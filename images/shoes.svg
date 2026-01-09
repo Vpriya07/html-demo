@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" role="img" aria-label="Running shoes">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff5f5"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="800" rx="40" fill="url(#bg)"/>
+  <circle cx="640" cy="160" r="120" fill="#ff4d4d" opacity="0.14"/>
+
+  <g filter="url(#shadow)">
+    <rect x="140" y="160" width="520" height="480" rx="32" fill="#fff" opacity="0.92"/>
+  </g>
+
+  <path d="M220 520c52 6 98-10 138-44l64-52c26-21 56-31 90-28l88 8c18 2 34 12 42 28l52 104c10 20 0 44-22 52l-66 24c-34 12-71 16-108 10l-240-32c-34-5-56-38-42-70l-14-24z" fill="#111827" opacity="0.78"/>
+  <path d="M250 548h344" stroke="#ff4d4d" stroke-width="10" stroke-linecap="round" opacity="0.55"/>
+
+  <text x="400" y="710" text-anchor="middle" font-family="Segoe UI, Arial" font-size="26" fill="#6b7280">Running Shoes</text>
+</svg>

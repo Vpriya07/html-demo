@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopEase – Modern Ecommerce</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-flex">
+      <h1 class="logo"><a class="logo-link" href="#">ShopEase</a></h1>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="#">Home</a> 
+        <a href="#products">Shop</a>
+        <a href="#features">Categories</a>
+        <a href="#footer">Contact</a>
+      </nav>
+      <button class="btn-outline">Login</button>
+    </div>
+  </header>
+
+  <main id="main">
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h2>Upgrade Your Style with Premium Products</h2>
+        <p>
+          Discover top-quality fashion, electronics, and lifestyle products.
+          Designed for comfort, style, and everyday use.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn-primary" href="#products">Shop Now</a>
+          <a class="btn-secondary" href="#features">Explore Categories</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80"
+          alt="Premium products"
+          class="hero-img"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="container feature-grid">
+      <div class="feature-card">
+        <h3>🚚 Free Shipping</h3>
+        <p>Free delivery on all orders above ₹999</p>
+      </div>
+      <div class="feature-card">
+        <h3>🔒 Secure Payment</h3>
+        <p>100% safe and secure payment gateway</p>
+      </div>
+      <div class="feature-card">
+        <h3>⭐ Premium Quality</h3>
+        <p>Carefully curated high-quality products</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="products" id="products">
+    <div class="container">
+      <h2 class="section-title">Featured Products</h2>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://www.boat-lifestyle.com/cdn/shop/files/Artboard_1_ecd64de9-2c17-47f4-976a-1d07bf8902cc_700x.png?v=1728871268" alt="Wireless Headphones" loading="lazy">
+          </div>
+          <h4>Wireless Headphones</h4>
+          <p class="price">₹2,499</p>
+          <button class="btn-primary full">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80" alt="Smart Watch" loading="lazy">
+          </div>
+          <h4>Smart Watch</h4>
+          <p class="price">₹3,999</p>
+          <button class="btn-primary full">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80" alt="Running Shoes" loading="lazy">
+          </div>
+          <h4>Running Shoes</h4>
+          <p class="price">₹1,899</p>
+          <button class="btn-primary full">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1200&q=80" alt="Leather Backpack" loading="lazy">
+          </div>
+          <h4>Leather Backpack</h4>
+          <p class="price">₹2,299</p>
+          <button class="btn-primary full">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container cta-box">
+      <h2>Get Exclusive Deals & Offers</h2>
+      <p>Subscribe now and never miss a deal.</p>
+      <a class="btn-primary" href="#products">Subscribe Now</a>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>ShopEase</h3>
+        <p>Your one-stop destination for premium shopping.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">FAQs</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+    <p class="copyright">© 2026 ShopEase. All rights reserved.</p>
+  </footer>
+
+  <script>
+    (() => {
+      const header = document.querySelector('.header');
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-nav');
+
+      if (!header || !toggle || !nav) return;
+
+      const setExpanded = (expanded) => {
+        toggle.setAttribute('aria-expanded', String(expanded));
+        toggle.setAttribute('aria-label', expanded ? 'Close menu' : 'Open menu');
+      };
+
+      toggle.addEventListener('click', () => {
+        const isOpen = header.classList.toggle('menu-open');
+        setExpanded(isOpen);
+      });
+
+      nav.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (!link) return;
+        header.classList.remove('menu-open');
+        setExpanded(false);
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key !== 'Escape') return;
+        header.classList.remove('menu-open');
+        setExpanded(false);
+      });
+    })();
+  </script>
+
+</body>
+</html>
